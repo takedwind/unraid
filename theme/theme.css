@@ -1,0 +1,84 @@
+
+/* 删除内容务必按区块删除 */
+
+/* CPU 型号修改 */
+</style>
+<script>
+  /* CPU 型号修改单引号内的内容 */
+  const cpuSpecificationStr = '                                    Intel Core i9-10900ES CPU @ 2.5GHz';
+  /* CPU 型号修改单引号内的内容 */
+  window.onload = () => {
+    const cpu = document.querySelector('.cpu_view');
+    if (!cpu) return;
+    const cpuSpecification = document.createElement('span');
+    cpuSpecification.innerHTML = cpuSpecificationStr;
+    cpuSpecification.id = 'cpu_spec'
+    cpu.childNodes[1].childNodes[0].remove();
+    cpu.childNodes[1].insertBefore(cpuSpecification, cpu.childNodes[1].childNodes[0]);
+  };
+</script>
+<style>
+/* CPU 型号修改 */
+
+/* CPU 型号以及负载跑马灯 */
+.sys > span {
+    background-image: linear-gradient(to right,#ff4500,orange,gold,#90ee90,#0ff,#1e90ff,#9370db,#ff69b4,#ff4500);
+    background-size: 50vw;
+    color: #fff;
+    animation: sliding 95s linear infinite;
+}
+
+#cpu_spec, .sortable > .view1 > td, .mb_view td, .sys_view td, .docker_view .inner {
+  margin: 0;
+  background-image: linear-gradient(to right,#ff4500,orange,gold,#90ee90,#0ff,#1e90ff,#9370db,#ff69b4,#ff4500);
+  background-size: 110vw;
+  color: #fff;
+  animation: sliding 30s linear infinite;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent
+}
+@keyframes sliding {
+  to {
+    background-position: -2000vw
+  }
+/* CPU 型号以及负载跑马灯 */
+
+/* 界面美化 */
+body {
+  font-family: consolas;
+}
+
+td span, input[type=text], input[type=password], input[type=number], input[type=url], input[type=email], input[type=date], input[type=file], textarea, .textarea {
+  font-family: consolas !important;
+}
+
+#header {
+  height: 300px;
+  background-size: auto 300px;
+}
+#header  .logo{
+  display: none;
+}
+#header  .block {
+  margin: 200px 0 0 0;
+  border-radius: 25px !important;
+}
+#menu {
+  top: 300px
+}
+div.tabs {
+  margin: 340px 0 0 0;
+}
+#header.image{
+  left: auto;
+  max-width: 1900px;
+  background-position-x: center;
+  background-image: url(*********** url ***********);
+}
+#nav-block {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: rgba(0,0,0,.15);
+}
+
+<link type="text/css" rel="stylesheet" href="https://theme-park.dev/css/base/unraid/organizr.css" />
